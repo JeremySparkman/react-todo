@@ -4,7 +4,6 @@ import Task from './Task';
 const TasksList = (props) => {
   return (
     <div>
-    <div>
       {props.tasks.map((task,index) => {
         return (
           <Task 
@@ -15,10 +14,6 @@ const TasksList = (props) => {
           />
         )
       })}
-    </div>
-      <button onClick={props.removeAllCompleted}>
-        Remove All Completed Tasks
-      </button>
     </div>
   );
 };
