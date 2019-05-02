@@ -37,6 +37,14 @@ class Main extends React.Component {
     });
   }
 
+  removeAllCompleted() {
+    let tasks = [...this.state.tasks];
+    tasks = tasks.filter( task => task.done === false);
+    this.setState({
+      tasks
+    });
+  }
+
   toggleTaskCompleted(e,i){
     const tasks = [...this.state.tasks];
     tasks[i] = {
@@ -60,6 +68,7 @@ class Main extends React.Component {
           tasks={this.state.tasks} 
           toggleTaskCompleted={this.toggleTaskCompleted.bind(this)}
           removeTask={this.removeTask.bind(this)}
+          removeAllCompleted={this.removeAllCompleted.bind(this)}
         />
       </div>
     )
