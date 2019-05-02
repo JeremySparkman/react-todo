@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "../images/plus-sign.svg";
 
 class Button extends React.Component {
   render(){
     return (
-      <a role="button" className="main__button" href="/addtask">
-        <img src={logo} alt="Add Task" />
-      </a>
+      <button className="main__button" type="submit">
+        &#43;
+      </button>
     )
   }
 }
