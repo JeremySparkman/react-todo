@@ -29,6 +29,14 @@ class Main extends React.Component {
     document.getElementById("submitTask").reset();
   }
 
+  removeTask(index) {
+    const tasks = [...this.state.tasks];
+    tasks.splice(index, 1);
+    this.setState({
+      tasks
+    });
+  }
+
   toggleTaskCompleted(e,i){
     const tasks = [...this.state.tasks];
     tasks[i] = {
@@ -51,6 +59,7 @@ class Main extends React.Component {
         <TasksList 
           tasks={this.state.tasks} 
           toggleTaskCompleted={this.toggleTaskCompleted.bind(this)}
+          removeTask={this.removeTask.bind(this)}
         />
       </div>
     )

@@ -10,6 +10,7 @@ const TasksList = (props) => {
           task={task}
           index={index}
           toggleTaskCompleted={props.toggleTaskCompleted}
+          removeTask={props.removeTask}
           />
         )
       })}
