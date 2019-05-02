@@ -90,7 +90,7 @@ class Main extends React.Component {
       tasks = this.state.tasks;
     } else if (this.state.tasksFilter === 'active'){
       tasks = this.state.tasks.filter(task => !task.done);
-    } else if (this.state.tasksFilter === 'completed'){
+    } else if (this.state.tasksFilter === 'complete'){
       tasks = this.state.tasks.filter(task => task.done);
     }
 
