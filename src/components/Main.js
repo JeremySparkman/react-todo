@@ -98,31 +98,39 @@ class Main extends React.Component {
       <div className="main">
         <h3>Active Tasks: {this.countActiveTasks()}</h3>
         <form id="submitTask" onSubmit={this.addTask.bind(this)}>
-          <input onChange={(event) => this.newTaskChanged(event)} id="newTask" />
+          <input 
+          placeholder={'Enter in your Next Task'} 
+          onChange={(event) => this.newTaskChanged(event)} 
+          id="newTask" />
           <Button  />
         </form>
+        <div className="filters">
+          <button 
+          className={`${this.state.tasksFilter === 'all' ? 'active' : ''} filters__button`} 
+          onClick={this.showAllTasks.bind(this)}>
+            Show All Tasks
+          </button>
+          <button 
+          className={`${this.state.tasksFilter === 'active' ? 'active' : ''} filters__button`} 
+          onClick={this.showActiveTasksOnly.bind(this)}>
+            Show Active Tasks
+          </button>
+          <button 
+          className={`${this.state.tasksFilter === 'complete' ? 'active' : ''} filters__button`} 
+          onClick={this.showCompletedTasksOnly.bind(this)}>
+            Show Completed Tasks
+          </button>
+          <button 
+          className='filters__button filters__button--remove'
+          onClick={this.removeAllCompleted.bind(this)}>
+            Remove All Completed Tasks
+          </button>
+        </div>
         <TasksList 
           tasks={tasks} 
           toggleTaskCompleted={this.toggleTaskCompleted.bind(this)}
           removeTask={this.removeTask.bind(this)}
         />
-        <button 
-        className={this.state.tasksFilter === 'all' ? 'active' : ''} onClick={this.showAllTasks.bind(this)}>
-          Show All Tasks
-        </button>
-        <button 
-        className={this.state.tasksFilter === 'active' ? 'active' : ''} 
-        onClick={this.showActiveTasksOnly.bind(this)}>
-          Show Active Tasks
-        </button>
-        <button 
-        className={this.state.tasksFilter === 'complete' ? 'active' : ''} 
-        onClick={this.showCompletedTasksOnly.bind(this)}>
-          Show Completed Tasks
-        </button>
-        <button onClick={this.removeAllCompleted.bind(this)}>
-          Remove All Completed Tasks
-        </button>
       </div>
     )
   }

@@ -3,12 +3,13 @@ import Task from './Task';
 
 const TasksList = (props) => {
   return (
-    <div>
+    <div className="taskList">
       {props.tasks.map((task,index) => {
         return (
           <Task 
           task={task}
           index={index}
+          key={index}
           toggleTaskCompleted={props.toggleTaskCompleted}
           removeTask={props.removeTask}
           />
