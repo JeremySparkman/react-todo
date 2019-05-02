@@ -52,3 +52,7 @@ html, body {
   padding: 15px;
   background-color: #FF8625;
 }
+
+.completed {
+  text-decoration: line-through;
+}
