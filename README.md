@@ -1,6 +1,6 @@
 ## Requirements for the App
 
-Thank you for checking out my code. 
+Thank you for checking out my code.<br>
 This project started as a quick code challenge where I had 3 days to complete the following:
 
 • The user must be able to enter a new, active task<br>
