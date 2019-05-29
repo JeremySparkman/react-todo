@@ -116,6 +116,7 @@ html, body {
   border-top: .1rem solid rgba(0, 0, 0, 0.192);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
 }
 
@@ -125,12 +126,18 @@ html, body {
 
 .task__label {
   width: 80%;
+  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 1024px) {
+  #root {
+    margin-bottom: 5rem;
+  }
+
   #newTask {
     width: 40%;
   }
+
   .main__button {
     height: 3.9rem;
     width: 4rem;
@@ -145,8 +152,10 @@ html, body {
     box-shadow: .05rem .1rem .2rem .05rem rgba(0,0,0,.87);
     background-color: #FF8625;
   }
+
   .filters {
     flex-direction: row;
     justify-content: center;
   }
+
 }
