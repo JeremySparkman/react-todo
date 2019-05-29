@@ -1,19 +1,20 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: center;
-  padding: 5px;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.87);
+  padding: .5rem;
+  box-shadow: 0 .2rem .2rem -.2rem rgba(0,0,0,.87);
   background-color: #FF8625;
 }
 
 .header__title {
-  font-size: 40px;
+  font-size: 4rem;
   font-family: 'Nothing You Could Do', cursive;
   width: fit-content;
 }
@@ -23,10 +24,10 @@ html, body {
 }
 
 .header__title--slashd::after {
-  border-bottom: 0.07em solid rgba(0, 0, 0, 0.75);
+  border-bottom: 0.07rem solid rgba(0, 0, 0, 0.75);
   content: "";
   left: 0;
-  margin-top: calc(0.07em / 2 * -1);
+  margin-top: calc(0.07rem / 2 * -1);
   position: absolute;
   right: 0;
   top: 50%;
@@ -34,23 +35,23 @@ html, body {
 
 .main {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .main__title {
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 .main__button {
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
   display: block;
   position: fixed;
-  font-size: 40px;
-  bottom: 50px;
-  right: 40px;
+  font-size: 4rem;
+  bottom: 5rem;
+  right: 4rem;
   border: none;
-  box-shadow: .5px 1px 2px .5px rgba(0,0,0,.87);
+  box-shadow: .05rem .1rem .2rem .05rem rgba(0,0,0,.87);
   border-radius: 50%;
   background-color: #FF8625;
 }
@@ -65,8 +66,8 @@ html, body {
 }
 
 #newTask {
-  margin: 0 0 20px;
-  padding: 10px;
+  margin: 0 0 2rem;
+  padding: 1rem;
   width: 80%;
 }
 
@@ -76,19 +77,19 @@ html, body {
 }
 
 .filters {
-  margin: 10px 0;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .filters__button {
-  padding: 15px;
+  padding: 1.5rem;
   width: 90%;
   font-weight: bold;
   color: black;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.192);
+  border: .1rem solid rgba(0, 0, 0, 0.192);
 }
 
 .filters__button:active {
@@ -106,15 +107,15 @@ html, body {
 }
 
 .task__item {
-  padding: 15px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.192);
+  padding: 1.5rem 0;
+  border-top: .1rem solid rgba(0, 0, 0, 0.192);
   display: flex;
   justify-content: space-between;
   width: 80%;
 }
 
 .task__button {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .task__label {
@@ -126,17 +127,17 @@ html, body {
     width: 40%;
   }
   .main__button {
-    height: 39px;
-    width: 40px;
+    height: 3.9rem;
+    width: 4rem;
     display: block;
-    margin-left: 15px;
+    margin-left: 1.5rem;
     position: static;
-    font-size: 20px;
-    bottom: 50px;
-    right: 40px;
+    font-size: 2rem;
+    bottom: 5rem;
+    right: 4rem;
     border: none;
     border-radius: unset;
-    box-shadow: 0.5px 1px 2px 0.5px rgba(0,0,0,.87);
+    box-shadow: .05rem .1rem .2rem .05rem rgba(0,0,0,.87);
     background-color: #FF8625;
   }
   .filters {
